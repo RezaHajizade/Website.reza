@@ -1,0 +1,12 @@
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\bin\Debug\net5.0\WebSite.reza.Infrastructure.deps.json
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\bin\Debug\net5.0\WebSite.reza.Infrastructure.dll
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\bin\Debug\net5.0\ref\WebSite.reza.Infrastructure.dll
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\bin\Debug\net5.0\WebSite.reza.Infrastructure.pdb
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\obj\Debug\net5.0\WebSite.reza.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\obj\Debug\net5.0\WebSite.reza.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\obj\Debug\net5.0\WebSite.reza.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\obj\Debug\net5.0\WebSite.reza.Infrastructure.AssemblyInfo.cs
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\obj\Debug\net5.0\WebSite.reza.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\obj\Debug\net5.0\WebSite.reza.Infrastructure.dll
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\obj\Debug\net5.0\ref\WebSite.reza.Infrastructure.dll
+C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Infrastructure\obj\Debug\net5.0\WebSite.reza.Infrastructure.pdb

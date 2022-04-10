@@ -1,0 +1,34 @@
+﻿@model IEnumerable<EndPoint.Site.Areas.Admin.Models.ViewModel.Roles.RoleListViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+    <div class="col-sm-12">
+        <table class="table table-striped table-bordered zero-configuration dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+            <thead>
+                <tr role="row">
+                    <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="نام نقش: activate to sort column descending" style="width: 222px;">نام نقش</th>
+                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="توضیحات: activate to sort column ascending" style="width: 401px;">توضیحات</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr role="row" class="odd">
+                        <td class="sorting_1">@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>
+                            <button class="btn btn-success">@Html.ActionLink("ویرایش","Edit",new {id=item.Id })</button>
+                            <button class="btn btn-danger">@Html.ActionLink("حذف","Delete",new {id=item.Id })</button>
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
