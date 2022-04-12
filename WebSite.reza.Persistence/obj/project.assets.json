@@ -6485,11 +6485,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Persistence\\WebSite.reza.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Persistence\\WebSite.reza.Persistence.csproj",
       "projectName": "WebSite.reza.Persistence",
-      "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Persistence\\WebSite.reza.Persistence.csproj",
+      "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Persistence\\WebSite.reza.Persistence.csproj",
       "packagesPath": "C:\\Users\\AMINSYSTEM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Persistence\\obj\\",
+      "outputPath": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6509,11 +6509,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Application\\WebSite.reza.Application.csproj": {
-              "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Application\\WebSite.reza.Application.csproj"
+            "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Application\\WebSite.reza.Application.csproj": {
+              "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Application\\WebSite.reza.Application.csproj"
             },
-            "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj": {
-              "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj"
+            "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj": {
+              "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj"
             }
           }
         }

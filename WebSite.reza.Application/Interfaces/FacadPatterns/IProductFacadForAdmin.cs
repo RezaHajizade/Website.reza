@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using WebSite.reza.Application.Services.Common.Queries.GetMenuItem;
 using WebSite.reza.Application.Services.Products.Commands.AddNewCategory;
 using WebSite.reza.Application.Services.Products.Commands.AddNewProduct;
+using WebSite.reza.Application.Services.Products.Commands.EditCategory;
+using WebSite.reza.Application.Services.Products.Commands.RemoveCategory;
 using WebSite.reza.Application.Services.Products.Queries.GetAllCategories;
 using WebSite.reza.Application.Services.Products.Queries.GetCategories;
 using WebSite.reza.Application.Services.Products.Queries.GetProductDetailForAdmin;
@@ -21,6 +23,9 @@ namespace WebSite.reza.Application.Interfaces.FacadPatterns
         AddNewProductService AddNewProductService { get; }
         IGetAllCategoriesService GetAllCategoriesService { get; }
 
+        IRemoveCategoryService RemoveCategoryService { get; }
+
+        IEditCategoryService EditCategoryService { get; }
         /// <summary>
         /// دریافت لیست محصولات
         /// </summary>

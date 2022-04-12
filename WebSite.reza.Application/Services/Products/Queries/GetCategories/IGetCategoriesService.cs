@@ -10,12 +10,12 @@ using WebSite.reza.Common.Dto;
 
 namespace WebSite.reza.Application.Services.Products.Queries.GetCategories
 {
-    public interface IGetCategoriesService
+    public interface IGetCategoryService
     {
         ResultDto<List<CategoriesDto>> Execute(long? parentId);
     }
 
-    public class GetCategoryService : IGetCategoriesService
+    public class GetCategoryService : IGetCategoryService
     {
         private readonly IDataBaseContext _context;
 
@@ -33,18 +33,32 @@ namespace WebSite.reza.Application.Services.Products.Queries.GetCategories
                 .ToList()
                 .Select(p => new CategoriesDto
                 {
-                    //Id = p.Id,
+                    Id = p.Id,
                     Name = p.Name,
                     HasChild = p.SubCategories.Count() > 0 ? true : false,
-                    Parent=p.ParentCategory !=null 
-                    
-                });
+                    Parent = p.ParentCategory != null ? new ParentCategoryDto
+                    {
+                        Id = p.ParentCategory.Id,
+                        Name = p.ParentCategory.Name,
+                    }
+                    : null
+                }).ToList();
+
+            return new ResultDto<List<CategoriesDto>>()
+            {
+                Data = category,
+                IsSuccess = true,
+                Message = "لیست با موفقیت برگشت داده شد"
+            };
+
+
+
         }
     }
 
     public class CategoriesDto
     {
-        public string Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
         public bool HasChild { get; set; }
         public ParentCategoryDto Parent { get; set; }
@@ -53,6 +67,6 @@ namespace WebSite.reza.Application.Services.Products.Queries.GetCategories
     public class ParentCategoryDto
     {
         public long Id { get; set; }
-        public string name { get; set; }
+        public string Name { get; set; }
     }
 }

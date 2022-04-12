@@ -10,3 +10,15 @@ C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.rez
 C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\WebSite.reza.Common.dll
 C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\ref\WebSite.reza.Common.dll
 C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\WebSite.reza.Common.pdb
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\bin\Debug\net5.0\WebSite.reza.Common.deps.json
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\bin\Debug\net5.0\WebSite.reza.Common.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\bin\Debug\net5.0\ref\WebSite.reza.Common.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\bin\Debug\net5.0\WebSite.reza.Common.pdb
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\WebSite.reza.Common.csproj.AssemblyReference.cache
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\WebSite.reza.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\WebSite.reza.Common.AssemblyInfoInputs.cache
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\WebSite.reza.Common.AssemblyInfo.cs
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\WebSite.reza.Common.csproj.CoreCompileInputs.cache
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\WebSite.reza.Common.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\ref\WebSite.reza.Common.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Common\obj\Debug\net5.0\WebSite.reza.Common.pdb

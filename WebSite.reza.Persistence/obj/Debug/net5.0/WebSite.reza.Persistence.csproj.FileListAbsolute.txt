@@ -20,3 +20,25 @@ C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.rez
 C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\WebSite.reza.Persistence.genruntimeconfig.cache
 C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Common.dll
 C:\Users\AMINSYSTEM\Desktop\project\MyProject\WebSite 1\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Common.pdb
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Persistence.deps.json
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Persistence.runtimeconfig.json
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Persistence.runtimeconfig.dev.json
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Persistence.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\ref\WebSite.reza.Persistence.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Persistence.pdb
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Application.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Common.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Domain.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Application.pdb
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Domain.pdb
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\bin\Debug\net5.0\WebSite.reza.Common.pdb
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\WebSite.reza.Persistence.csproj.AssemblyReference.cache
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\WebSite.reza.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\WebSite.reza.Persistence.AssemblyInfoInputs.cache
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\WebSite.reza.Persistence.AssemblyInfo.cs
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\WebSite.reza.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\WebSite.reza.Persistence.csproj.CopyComplete
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\WebSite.reza.Persistence.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\ref\WebSite.reza.Persistence.dll
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\WebSite.reza.Persistence.pdb
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\WebSite.reza.Persistence\obj\Debug\net5.0\WebSite.reza.Persistence.genruntimeconfig.cache

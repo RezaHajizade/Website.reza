@@ -784,11 +784,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Infrastructure\\WebSite.reza.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Infrastructure\\WebSite.reza.Infrastructure.csproj",
       "projectName": "WebSite.reza.Infrastructure",
-      "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Infrastructure\\WebSite.reza.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Infrastructure\\WebSite.reza.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\AMINSYSTEM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

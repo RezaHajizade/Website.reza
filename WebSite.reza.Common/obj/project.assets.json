@@ -785,11 +785,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Common\\WebSite.reza.Common.csproj",
+      "projectUniqueName": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Common\\WebSite.reza.Common.csproj",
       "projectName": "WebSite.reza.Common",
-      "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Common\\WebSite.reza.Common.csproj",
+      "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Common\\WebSite.reza.Common.csproj",
       "packagesPath": "C:\\Users\\AMINSYSTEM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Common\\obj\\",
+      "outputPath": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

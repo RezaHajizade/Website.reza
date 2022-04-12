@@ -44,22 +44,24 @@
                                                         <td class="sorting_1">@item.Name</td>
                                                         <td>
                                                             @{
-                                                                string parent = item.parent != null ? item.parent.Name : "-";
+                                                                string parent = item.Parent != null ? item.Parent.Name : "-";
                                                             }
 
                                                             <text> @parent </text>
                                                         </td>
                                                         <td>
-                                                            @if (item.parent == null)
+                                                            @if (item.Parent == null)
                                                             {
-                                                                <a href="~/admin/Categories/AddNewCategory?ParentId=@item.Id" class="btn btn-success">افزودن فرزند</a>
+                                                                <a href="~/admin/Categories/AddNewCategory?parentId=@item.Id" class="btn btn-success">افزودن فرزند</a>
                                                             }
 
                                                             @if (item.HasChild == true)
                                                             {
-                                                                <a href="~/admin/Categories/index?ParentId=@item.Id" class="btn btn-info">مشاهده لیست فرزند ها </a>
+                                                                <a href="~/admin/Categories/index?parentId=@item.Id" class="btn btn-info">مشاهده لیست فرزند ها </a>
                                                             }
-
+                                                            @*<button class="btn btn-danger" onclick="RemoveCategory(@item.Id)">حذف</button>*@
+                                                            <a class="btn btn-danger" href="~/admin/Categories/RemoveCategory?Id=@item.Id">حذف</a>
+                                                            <button class="btn btn-info" onclick="ShowModalEditCategory('@item.Id')">ویرایش</button>
                                                         </td>
                                                     </tr>
                                                 }
@@ -71,9 +73,159 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
         </section>
     </div>
 </div>
+@section Scripts
+{
 
+
+    <link href="~/Sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <script src="~/Sweetalert2/sweetalert2.min.js"></script>
+
+    <script>
+        function RemoveCategory(Id) {
+            swal.fire({
+                title: 'حذف دسته بندی',
+                text: "کاربر گرامی از حذف دسته بندی مطمئن هستید؟",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#7cacbe',
+                confirmButtonText: 'بله ، دسته بندی حذف شود',
+                cancelButtonText: 'خیر'
+            }).then((result) => {
+                if (result.value) {
+                    var postData = {
+                        'Id': Id,
+                    };
+
+                    $.ajax({
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json',
+                        type: "POST",
+                        url: "RemoveCategory",
+                        data: postData,
+                        success: function (data) {
+                            if (data.isSuccess == true) {
+                                swal.fire(
+                                    'موفق!',
+                                    data.message,
+                                    'success'
+                                ).then(function (isConfirm) {
+                                    location.reload();
+                                });
+                            }
+                            else {
+
+                                swal.fire(
+                                    'هشدار!',
+                                    data.message,
+                                    'warning'
+                                );
+
+                            }
+                        },
+                        error: function (request, status, error) {
+                            alert(request.responseText);
+                        }
+
+                    });
+
+                }
+            })
+        }
+
+
+        function EditCategory() {
+
+            var Id = $("#Edit_Id").val();
+            var Name = $("#Edit_Name").val();
+
+            var postData = {
+                'Id': Id,
+                'Name': Name,
+            };
+
+
+            $.ajax({
+                contentType: 'application/x-www-form-urlencoded',
+                dataType: 'json',
+                type: "POST",
+                url: "EditCategory",
+                data: postData,
+                success: function (data) {
+                    if (data.isSuccess == true) {
+                        swal.fire(
+                            'موفق!',
+                            data.message,
+                            'success'
+                        ).then(function (isConfirm) {
+                            location.reload();
+                           
+                        });
+                    }
+                    else {
+                        swal.fire(
+                            'هشدار!',
+                            data.message,
+                            'warning'
+                        );
+                    }
+                },
+                error: function (request, status, error) {
+                    alert(request.responseText);
+                }
+            });
+
+            $('#EditUser').modal('hide');
+
+        }
+
+
+
+        function ShowModalEditCategory(Id, Name) {
+            $('#Edit_Name').val(Name)
+            $('#Edit_Id').val(Id)
+
+            $('#EditCategory').modal('show');
+            
+        }
+
+        debugger;
+    </script>
+
+}
+
+
+@section Modals
+{
+    <!-- Modal Edit Category -->
+    <div class="modal fade" id="EditCategory" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">ویرایش دسته بندی</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
+                        <fieldset class="form-group">
+                            <input type="hidden" id="Edit_Id" />
+                            <label for="basicInput">نام دسته بندی</label>
+                            <input type="text" class="form-control" id="Edit_Name">
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-secondary" data-dismiss="modal">بستن</a>
+                    <a class="btn btn-primary" onclick="EditCategory()">اعمال تغییرات</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj": {}
+    "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj": {
+    "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj",
         "projectName": "WebSite.reza.Domain",
-        "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj",
+        "projectPath": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Domain\\WebSite.reza.Domain.csproj",
         "packagesPath": "C:\\Users\\AMINSYSTEM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AMINSYSTEM\\Desktop\\project\\MyProject\\WebSite 1\\WebSite.reza\\WebSite.reza.Domain\\obj\\",
+        "outputPath": "C:\\Users\\AMINSYSTEM\\Desktop\\WebSite.reza\\WebSite.reza.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

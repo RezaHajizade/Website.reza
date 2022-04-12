@@ -10,6 +10,8 @@ using WebSite.reza.Application.Interfaces.FacadPatterns;
 using WebSite.reza.Application.Services.Common.Queries.GetMenuItem;
 using WebSite.reza.Application.Services.Products.Commands.AddNewCategory;
 using WebSite.reza.Application.Services.Products.Commands.AddNewProduct;
+using WebSite.reza.Application.Services.Products.Commands.EditCategory;
+using WebSite.reza.Application.Services.Products.Commands.RemoveCategory;
 using WebSite.reza.Application.Services.Products.Queries.GetAllCategories;
 using WebSite.reza.Application.Services.Products.Queries.GetCategories;
 using WebSite.reza.Application.Services.Products.Queries.GetProductDetailForAdmin;
@@ -21,7 +23,7 @@ namespace WebSite.reza.Application.Services.Products.Facade_Pattern
     {
         private readonly IDataBaseContext _context;
         private readonly IWebHostEnvironment _environment;
-        public ProductFacadForAdmin(IWebHostEnvironment environment, IDataBaseContext context )
+        public ProductFacadForAdmin(IWebHostEnvironment environment, IDataBaseContext context)
         {
             _context = context;
             _environment = environment;
@@ -47,15 +49,33 @@ namespace WebSite.reza.Application.Services.Products.Facade_Pattern
             }
         }
 
+        private IRemoveCategoryService _removeCategoryService;
+        public IRemoveCategoryService RemoveCategoryService
+        {
+            get
+            {
+                return _removeCategoryService = _removeCategoryService ?? new RemoveCategoryService(_context);
+            }
+        }
+
+        private IEditCategoryService _editCategoryService; 
+        public IEditCategoryService EditCategoryService
+        {
+            get
+            {
+                return _editCategoryService = _editCategoryService ?? new EditCategoryService(_context);
+            }
+        }
+
         private AddNewProductService _addNewProductService;
         public AddNewProductService AddNewProductService
         {
             get
             {
-                return _addNewProductService = _addNewProductService ?? new AddNewProductService( _environment, _context);
+                return _addNewProductService = _addNewProductService ?? new AddNewProductService(_environment, _context);
             }
         }
-   
+
         private IGetAllCategoriesService _getAllCategoriesService;
         public IGetAllCategoriesService GetAllCategoriesService
         {
@@ -75,7 +95,7 @@ namespace WebSite.reza.Application.Services.Products.Facade_Pattern
         }
 
         private IGetProductDetailForAdmin _getProductDetailForAdmin;
-        
+
         public IGetProductDetailForAdmin GetProductDetailForAdmin
         {
             get
@@ -84,6 +104,6 @@ namespace WebSite.reza.Application.Services.Products.Facade_Pattern
             }
         }
 
-        
+
     }
 }
