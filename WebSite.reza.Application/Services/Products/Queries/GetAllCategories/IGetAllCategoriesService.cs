@@ -22,13 +22,12 @@ namespace WebSite.reza.Application.Services.Products.Queries.GetAllCategories
         {
             _context = context;
         }
+
         public ResultDto<List<AllCategoriesDto>> Execute()
         {
-            var categories = _context
-                .Categories
+            var categories = _context.Categories
                 .Include(p => p.ParentCategory)
                 .Where(p => p.ParentCategoryId != null)
-                .ToList()
                 .Select(p => new AllCategoriesDto
                 {
                     Id = p.Id,
@@ -38,10 +37,9 @@ namespace WebSite.reza.Application.Services.Products.Queries.GetAllCategories
             return new ResultDto<List<AllCategoriesDto>>
             {
                 Data = categories,
-                IsSuccess = false,
-                Message = "",
+                IsSuccess = true,
+                Message = ""
             };
-
         }
     }
 

@@ -39,7 +39,7 @@ namespace EndPoint.Site.Controllers
                 PageImages = _homePageImageService.Execute().Data,
                 Camera = _productFacadForSite.GetProductForSiteService.Execute(Ordering.theNewest, null, 1, 5, 11).Data.Products,
             };
-            
+
             return View(homePage);
         }
 

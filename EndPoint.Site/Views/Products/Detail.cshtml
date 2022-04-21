@@ -170,7 +170,7 @@
                                         <div class="gallery-img">
                                             <a href="#">
                                                 <img class="zoom-img" id="img-product-zoom" src="~/@Model.Images.FirstOrDefault()"
-                                                     data-zoom-image="~/@Model.Images.FirstOrDefault()" width="411" />
+                                                     data-zoom-image="/@Model.Images.FirstOrDefault()" width="411" />
                                                 <div id="gallery_01f" style="width:420px;float:right;">
                                             </a>
                                             <ul class="gallery-items owl-carousel owl-theme" id="gallery-slider">
@@ -181,17 +181,17 @@
                                                         <a href="#" class="elevatezoom-gallery active" data-update=""
                                                            data-image="/@item"
                                                            data-zoom-image="/@item">
-                                                            <img src="/@item" width="100" />
+                                                            <img src="~/@item" width="100" />
                                                         </a>
                                                     </li>
                                                 }
-                                                @*<li class="item">
+                                                <li class="item">
                                                         <a href="#" class="elevatezoom-gallery active" data-update=""
                                                            data-image="assets/images/page-single-product/product-img/product-img-note10-big-2.jpg"
                                                            data-zoom-image="assets/images/page-single-product/product-img/product-img-note10-big-2.jpg">
                                                             <img src="assets/images/page-single-product/product-img/product-img-note10-big-2.jpg" width="100" />
                                                         </a>
-                                                    </li>*@
+                                                    </li>
                                             </ul>
                                         </div>
                                     </div>

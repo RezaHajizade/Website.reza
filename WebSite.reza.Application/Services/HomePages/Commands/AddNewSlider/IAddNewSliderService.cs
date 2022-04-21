@@ -21,7 +21,6 @@ namespace WebSite.reza.Application.Services.HomePages.AddNewSlider
 
     public class AddNewSliderService : IAddNewSliderService
     {
-
         private readonly IWebHostEnvironment _environment;
         private readonly IDataBaseContext _context;
 
@@ -30,11 +29,11 @@ namespace WebSite.reza.Application.Services.HomePages.AddNewSlider
             _environment = environment;
             _context = context;
         }
+
         public ResultDto Execute(IFormFile file, string Link)
         {
+
             var resultUpload = UploadFile(file);
-
-
             Slider slider = new Slider()
             {
                 Link = Link,
@@ -43,12 +42,13 @@ namespace WebSite.reza.Application.Services.HomePages.AddNewSlider
             _context.Sliders.Add(slider);
             _context.SaveChanges();
 
+
             return new ResultDto()
             {
-                IsSuccess = true
+                IsSuccess = true,
             };
-
         }
+
         private UploadDto UploadFile(IFormFile file)
         {
             if (file != null)
@@ -77,12 +77,13 @@ namespace WebSite.reza.Application.Services.HomePages.AddNewSlider
 
                 return new UploadDto()
                 {
-                    FileNameAddress =folder+  fileName,
+                    FileNameAddress = folder + fileName,
                     Status = true,
                 };
             }
             return null;
         }
     }
-
 }
+
+

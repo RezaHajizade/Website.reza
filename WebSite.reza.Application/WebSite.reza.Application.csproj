@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="Services\Common\Commands\" />
+    <Folder Include="Services\Users\Queries\" />
   </ItemGroup>
 
 </Project>

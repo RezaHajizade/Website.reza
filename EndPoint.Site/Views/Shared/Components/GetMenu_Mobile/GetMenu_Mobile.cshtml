@@ -1,0 +1,40 @@
+﻿@using WebSite.reza.Application.Services.Common.Queries.GetMenuItem
+@model List<MenuItemDto>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+@foreach (var item in Model)
+{
+    <li>
+        <a href="#" class="collapsed" type="button" data-toggle="collapse"
+           data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <i class="mdi mdi-chevron-down"></i>@item.Name
+        </a>
+        @if (item.Child.Count() > 0)
+        {
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                 data-parent="#accordionExample" style="">
+                @foreach (var itemchild in item.Child)
+                {
+                    <ul>
+
+                        <li>
+                            <a href="#" class="category-level-2 mega-menu-link">
+                                @itemchild.Name
+                            </a>
+                        </li>
+
+                    </ul>
+                }
+            </div>
+        }
+    </li>
+}
+<li><a href="#">درباره ما</a></li>
+<li><a href="#">تماس با ما</a></li>
+
+

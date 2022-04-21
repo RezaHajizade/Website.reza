@@ -410,3 +410,5 @@ C:\Users\AMINSYSTEM\Desktop\WebSite.reza\EndPoint.Site\bin\Debug\net5.0\WebSite.
 C:\Users\AMINSYSTEM\Desktop\WebSite.reza\EndPoint.Site\obj\Debug\net5.0\EndPoint.Site.Views.pdb
 C:\Users\AMINSYSTEM\Desktop\WebSite.reza\EndPoint.Site\obj\Debug\net5.0\EndPoint.Site.csproj.CopyComplete
 C:\Users\AMINSYSTEM\Desktop\WebSite.reza\EndPoint.Site\obj\Debug\net5.0\EndPoint.Site.genruntimeconfig.cache
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\EndPoint.Site\obj\Debug\net5.0\Razor\Views\Shared\Components\GetMenu_Mobile\GetMenu_Mobile.cshtml.g.cs
+C:\Users\AMINSYSTEM\Desktop\WebSite.reza\EndPoint.Site\obj\Debug\net5.0\Razor\Areas\Admin\Views\Sliders\Index.cshtml.g.cs

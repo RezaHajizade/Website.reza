@@ -33,7 +33,7 @@ namespace WebSite.reza.Application.Services.Products.Commands.RemoveCategory
                     Message = "هیچ دسته بندی یافت نشد",
                 };
             }
-
+           // _Context.Categories.Remove(category);
             category.RemoveTime = DateTime.Now;
             category.IsRemoved = true;
             _Context.SaveChanges();

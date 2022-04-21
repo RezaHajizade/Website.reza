@@ -31,13 +31,7 @@ using WebSite.reza.Application.Services.Orders.Queries.GetOrdersForAdmin;
 using WebSite.reza.Application.Services.Orders.Queries.GetRequestPayForAdmin;
 using WebSite.reza.Application.Services.Products.Facade_Pattern;
 using WebSite.reza.Application.Services.Products.FacadePattern;
-using WebSite.reza.Application.Services.Users.Commands.EditUser;
-//using WebSite.reza.Application.Services.Users.Commands.RegisterUser;
-using WebSite.reza.Application.Services.Users.Commands.RemoveUser;
-//using WebSite.reza.Application.Services.Users.Commands.UserLogin;
 using WebSite.reza.Application.Services.Users.Commands.UserStatusChange;
-using WebSite.reza.Application.Services.Users.Queries.GetRoles;
-using WebSite.reza.Application.Services.Users.Queries.GetUsers;
 using WebSite.reza.Common.Roles;
 using WebSite.reza.Domain.Entities.Users;
 using WebSite.reza.Persistence.Contexts;
@@ -81,13 +75,7 @@ namespace EndPoint.Site
 
 
             services.AddScoped<IDataBaseContext, DataBaseContext>();
-          //  services.AddScoped<IGetUsersService, GetUserService>();
-            services.AddScoped<IGetRolesService, GetRolesService>();
-          //  services.AddScoped<IRegisterUserService, RegisterUserService>();
-            services.AddScoped<IRemoveUserService, RemoveUserService>();
-          // services.AddScoped<IUserLoginService, UserLoginService>();
             services.AddScoped<IUserStatusChangeService, UserStatusChangeService>();
-            services.AddScoped<IEditUserService, EditUserService>();
 
 
 
@@ -98,7 +86,7 @@ namespace EndPoint.Site
 
             //.................
             services.AddScoped<IAddNewSliderService, AddNewSliderService>();
-            services.AddScoped<IGetSliderService, GetSliderServvice>();
+            services.AddScoped<IGetSliderService, GetSliderService>();
             services.AddScoped<IAddHomePageImageService, AddHomePageImageService>();
             services.AddScoped<IGetHomePageImageService, GetHomePageImageService>();
             services.AddScoped<ICartService, CartService>();

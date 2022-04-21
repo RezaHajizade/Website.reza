@@ -59,8 +59,8 @@
                                                             {
                                                                 <a href="~/admin/Categories/index?parentId=@item.Id" class="btn btn-info">مشاهده لیست فرزند ها </a>
                                                             }
-                                                            @*<button class="btn btn-danger" onclick="RemoveCategory(@item.Id)">حذف</button>*@
-                                                            <a class="btn btn-danger" href="~/admin/Categories/RemoveCategory?Id=@item.Id">حذف</a>
+                                                            <button class="btn btn-danger" onclick="RemoveCategory('@item.Id')">حذف</button>
+                                                            @*<a class="btn btn-danger" href="~/admin/Categories/RemoveCategory?Id=@item.Id">حذف</a>*@
                                                             <button class="btn btn-info" onclick="ShowModalEditCategory('@item.Id')">ویرایش</button>
                                                         </td>
                                                     </tr>
@@ -104,7 +104,7 @@
                     $.ajax({
                         contentType: 'application/x-www-form-urlencoded',
                         dataType: 'json',
-                        type: "POST",
+                        type: "GET",
                         url: "RemoveCategory",
                         data: postData,
                         success: function (data) {

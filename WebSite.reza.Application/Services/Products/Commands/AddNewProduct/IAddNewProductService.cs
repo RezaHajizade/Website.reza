@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,22 +9,20 @@ using System.Threading.Tasks;
 using WebSite.reza.Application.Interfaces.Contexts;
 using WebSite.reza.Common.Dto;
 using WebSite.reza.Domain.Entities.Products;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
 
 namespace WebSite.reza.Application.Services.Products.Commands.AddNewProduct
 {
     public interface IAddNewProductService
     {
         ResultDto Execute(RequestAddNewProductDto request);
+
     }
 
     public class AddNewProductService : IAddNewProductService
     {
         private readonly IDataBaseContext _context;
         private readonly IWebHostEnvironment _environment;
-
-        public AddNewProductService(IWebHostEnvironment environment, IDataBaseContext context )
+        public AddNewProductService(IDataBaseContext context, IWebHostEnvironment environment)
         {
             _context = context;
             _environment = environment;
@@ -32,51 +30,62 @@ namespace WebSite.reza.Application.Services.Products.Commands.AddNewProduct
 
         public ResultDto Execute(RequestAddNewProductDto request)
         {
-            var category = _context.Categories.Find(request.CategoryId);
-
-            Product product = new Product()
+            try
             {
-                Name = request.Name,
-                Brand = request.Brand,
-                Description = request.Description,
-                Price = request.Price,
-                Displayed = request.Displayed,
-                Inventory = request.Inventory,
-                Category = category,
-            };
-            _context.Products.Add(product);
-
-            List<ProductImages> productImages = new List<ProductImages>();
-            foreach (var item in request.Images)
-            {
-                var uploadedResult = UploadFile(item);
-                productImages.Add(new ProductImages
+                var category = _context.Categories.Find(request.CategoryId);
+                Product product = new Product()
                 {
-                    Product = product,
-                    Src = uploadedResult.FileNameAddress,
-                });
-                    
+                    Brand = request.Brand,
+                    Description = request.Description,
+                    Name = request.Name,
+                    Price = request.Price,
+                    Inventory = request.Inventory,
+                    Category = category,
+                    Displayed = request.Displayed,
+                };
+                _context.Products.Add(product);
+
+                List<ProductImages> ProductImages = new List<ProductImages>();
+                foreach (var item in request.Images)
+                {
+                    var uploadResult = UploadFile(item);
+                    ProductImages.Add(new ProductImages
+                    {
+                        Product = product,
+                        Src = uploadResult.FileNameAddress
+                    });
+                }
+                _context.ProductImages.AddRange(ProductImages);
+
+
+                List<ProductFeatures> productFeatures = new List<ProductFeatures>();
+                foreach(var item in request.Features)
+                {
+                    productFeatures.Add(new ProductFeatures
+                    {
+                        Value = item.Value,
+                        DisplayName = item.DisplayName,
+                        Product = product
+                    });
+                }
+                _context.ProductFeatures.AddRange(productFeatures);
+
+                _context.SaveChanges();
+
+                return new ResultDto
+                {
+                    IsSuccess = true,
+                    Message = "محصول با موفقیت اضافه شد"
+                };
             }
-            _context.ProductImages.AddRange(productImages);
-
-            List<ProductFeatures> productFeatures = new List<ProductFeatures>();
-            foreach(var item in request.Features)
+            catch (Exception ex)
             {
-                productFeatures.Add (new ProductFeatures{
-                    DisplayName=item.DisplayName,
-                    Value=item.Value,
-                    Product=product,
-                });
+                return new ResultDto
+                {
+                    IsSuccess = false,
+                    Message = "خطا رخ داده"
+                };
             }
-            _context.ProductFeatures.AddRange(productFeatures);
-
-            _context.SaveChanges();
-
-            return new ResultDto
-            {
-                IsSuccess = true,
-                Message = "محصول با موفقیت به محصولات فروشگاه اضافه شد!",
-            };
         }
         private UploadDto UploadFile(IFormFile file)
         {
@@ -88,35 +97,31 @@ namespace WebSite.reza.Application.Services.Products.Commands.AddNewProduct
                 {
                     Directory.CreateDirectory(uploadsRootFolder);
                 }
-
-
                 if (file == null || file.Length == 0)
                 {
-                    return new UploadDto()
+                    return new UploadDto
                     {
                         Status = false,
-                        FileNameAddress = "",
+                        FileNameAddress = ""
                     };
                 }
 
-                string fileName = DateTime.Now.Ticks.ToString() + file.FileName;
-                var filePath = Path.Combine(uploadsRootFolder, fileName);
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                string filename = DateTime.Now.Ticks.ToString() + file.FileName;
+                var filepath = Path.Combine(uploadsRootFolder, filename);
+                using (var fileStream = new FileStream(filepath, FileMode.Create))
                 {
                     file.CopyTo(fileStream);
                 }
 
-                return new UploadDto()
+                return new UploadDto
                 {
-                    FileNameAddress = folder + fileName,
+                    FileNameAddress = folder + filename,
                     Status = true,
                 };
             }
             return null;
         }
     }
-
-  
 
     public class UploadDto
     {
@@ -131,9 +136,8 @@ namespace WebSite.reza.Application.Services.Products.Commands.AddNewProduct
         public string Description { get; set; }
         public int Price { get; set; }
         public int Inventory { get; set; }
-        public bool Displayed { get; set; }
-        //فیلد زیر یک آیدی میگیره که آیدی کتگوری آیدی هست که قبلا در سیستم اضافه کردیم
         public long CategoryId { get; set; }
+        public bool Displayed { get; set; }
         public List<IFormFile> Images { get; set; }
         public List<AddNewProduct_Features> Features { get; set; }
     }

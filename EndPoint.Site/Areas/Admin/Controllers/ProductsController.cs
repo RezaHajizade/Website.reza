@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebSite.reza.Application.Interfaces.FacadPatterns;
 using WebSite.reza.Application.Services.Products.Commands.AddNewProduct;
+using WebSite.reza.Domain.Entities.Products;
 
 namespace EndPoint.Site.Areas.Admin.Controllers
 {
@@ -25,29 +26,35 @@ namespace EndPoint.Site.Areas.Admin.Controllers
             return View(_productFacad.GetProductForAdminService.Execute(Page,PageSize).Data);
         }
 
-        public IActionResult Detail(long Id)
-        {
-            return View(_productFacad.GetProductDetailForAdmin.Execute(Id).Data);
-        }
-
         [HttpGet]
         public IActionResult AddNewProduct()
         {
-            ViewBag.Categories = new SelectList(_productFacad.GetAllCategoriesService.Execute().Data, "Id", "Name");
+            ViewBag.Categories = new SelectList(_productFacad.GetAllCategoriesService.Execute().Data,"Id","Name");
             return View();
         }
         [HttpPost]
-        public IActionResult AddNewProduct(RequestAddNewProductDto request,List<AddNewProduct_Features> Features)
+        public IActionResult AddNewProduct(RequestAddNewProductDto request, List<AddNewProduct_Features> features)
         {
+
             List<IFormFile> images = new List<IFormFile>();
-            for(var i=0;i<Request.Form.Files.Count;i++)
+            for (int i = 0; i < Request.Form.Files.Count; i++)
             {
                 var file = Request.Form.Files[i];
                 images.Add(file);
             }
             request.Images = images;
-            request.Features = Features;
+            request.Features = features;
+
             return Json(_productFacad.AddNewProductService.Execute(request));
+        }
+        
+        public IActionResult Detail(long Id)
+        {
+            return View(_productFacad.GetProductDetailForAdmin.Execute(Id).Data);
+        }
+        public IActionResult RemoveProduct(long Id)
+        {
+            return Json(_productFacad.RemoveProduct.Execute(Id));
         }
     }
 }

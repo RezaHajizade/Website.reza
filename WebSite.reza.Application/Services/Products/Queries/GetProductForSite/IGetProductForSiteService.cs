@@ -6,7 +6,7 @@ namespace WebSite.reza.Application.Services.Products.Queries.GetProductForSite
 {
     public interface IGetProductForSiteService
     {
-        ResultDto<ResultProductForSiteDto> Execute(Ordering ordering, string SearchKey,int Page,int pageSize,long? CatId);
+        ResultDto<ResultProductForSiteDto> Execute(Ordering ordering, string SearchKey, int Page, int pageSize, long? CatId);
     }
     public enum Ordering
     {

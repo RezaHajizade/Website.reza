@@ -44,7 +44,7 @@ namespace EndPoint.Site.Areas.Admin.Controllers
             return Json(result);
         }
 
-        [HttpPost]
+        
         public IActionResult RemoveCategory(long Id)
         {
             return Json(_productFacad.RemoveCategoryService.Execute(Id));

@@ -18,24 +18,26 @@ namespace WebSite.reza.Application.Services.Products.Queries.GetProductDetailFor
 
     public class GetProductDetailForAdmin : IGetProductDetailForAdmin
     {
+
         private readonly IDataBaseContext _context;
+
         public GetProductDetailForAdmin(IDataBaseContext context)
         {
             _context = context;
         }
+
         public ResultDto<ProductDetailForAdmindto> Execute(long Id)
         {
             var product = _context.Products
-                               .Include(p => p.Category)
-                               .ThenInclude(p => p.ParentCategory)
-                               .Include(p => p.ProductFeatures)
-                               .Include(p => p.ProductImages)
-                               .Where(p => p.Id == Id)
-                               .FirstOrDefault();
-
-            return new ResultDto<ProductDetailForAdmindto>
+               .Include(p => p.Category)
+               .ThenInclude(p => p.ParentCategory)
+               .Include(p => p.ProductFeatures)
+               .Include(p => p.ProductImages)
+               .Where(p => p.Id == Id)
+               .FirstOrDefault();
+            return new ResultDto<ProductDetailForAdmindto>()
             {
-                Data = new ProductDetailForAdmindto
+                Data = new ProductDetailForAdmindto()
                 {
                     Brand = product.Brand,
                     Category = GetCategory(product.Category),
@@ -49,29 +51,32 @@ namespace WebSite.reza.Application.Services.Products.Queries.GetProductDetailFor
                     {
                         Id = p.Id,
                         DisplayName = p.DisplayName,
-                        Value = p.Value,
+                        Value = p.Value
                     }).ToList(),
                     Images = product.ProductImages.ToList().Select(p => new ProductDetailImagesDto
                     {
                         Id = p.Id,
-                        Src = p.Src
+                        Src = p.Src,
                     }).ToList(),
-
                 },
                 IsSuccess = true,
                 Message = "",
             };
+
         }
 
 
-        private string GetCategory(Category category)
+        private string GetCategory(Category Category)
         {
-            string result = category.ParentCategory != null ? $"{category.ParentCategory.Name} - " : "";
-            return result += category.Name;
+            string result = Category.ParentCategory != null ? $"{Category.ParentCategory.Name}-" : "";
+            return result += Category.Name;
         }
-    }
 
-        public class ProductDetailForAdmindto
+
+    }
+ 
+
+    public class ProductDetailForAdmindto
         {
             public long Id { get; set; }
             public string Name { get; set; }

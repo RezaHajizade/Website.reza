@@ -14,29 +14,28 @@ namespace WebSite.reza.Application.Services.Common.Queries.GetSlider
     }
 
 
-    public class GetSliderServvice: IGetSliderService
+    public class GetSliderService : IGetSliderService
     {
         private readonly IDataBaseContext _context;
 
-        public GetSliderServvice(IDataBaseContext context)
+        public GetSliderService(IDataBaseContext context)
         {
             _context = context;
         }
 
         public ResultDto<List<SliderDto>> Execute()
         {
-            var sliders = _context.Sliders.OrderByDescending(p => p.Id).ToList().Select(
-               p => new SliderDto
-               {
-                   Link=p.Link,
-                   Src=p.Src
-               }).ToList();
+            var sliders = _context.Sliders.OrderByDescending(p => p.Id).ToList().Select(p => new SliderDto
+            {
+                Link = p.Link,
+                Src = p.Src
+            }).ToList();
 
             return new ResultDto<List<SliderDto>>()
             {
                 Data = sliders,
                 IsSuccess = true,
-            };
+            };                          
         }
     }
     public class SliderDto

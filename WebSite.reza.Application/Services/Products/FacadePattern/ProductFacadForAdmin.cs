@@ -8,10 +8,12 @@ using System.Threading.Tasks;
 using WebSite.reza.Application.Interfaces.Contexts;
 using WebSite.reza.Application.Interfaces.FacadPatterns;
 using WebSite.reza.Application.Services.Common.Queries.GetMenuItem;
+using WebSite.reza.Application.Services.HomePages.AddNewSlider;
 using WebSite.reza.Application.Services.Products.Commands.AddNewCategory;
 using WebSite.reza.Application.Services.Products.Commands.AddNewProduct;
 using WebSite.reza.Application.Services.Products.Commands.EditCategory;
 using WebSite.reza.Application.Services.Products.Commands.RemoveCategory;
+using WebSite.reza.Application.Services.Products.Commands.RemoveProduct;
 using WebSite.reza.Application.Services.Products.Queries.GetAllCategories;
 using WebSite.reza.Application.Services.Products.Queries.GetCategories;
 using WebSite.reza.Application.Services.Products.Queries.GetProductDetailForAdmin;
@@ -72,7 +74,17 @@ namespace WebSite.reza.Application.Services.Products.Facade_Pattern
         {
             get
             {
-                return _addNewProductService = _addNewProductService ?? new AddNewProductService(_environment, _context);
+                return _addNewProductService = _addNewProductService ?? new AddNewProductService(
+                    _context, _environment);
+            }
+        }
+
+        private IRemoveProduct _removeProduct;
+        public IRemoveProduct RemoveProduct
+        {
+            get
+            {
+                return _removeProduct = _removeProduct ?? new RemoveProduct(_context);
             }
         }
 
@@ -104,6 +116,7 @@ namespace WebSite.reza.Application.Services.Products.Facade_Pattern
             }
         }
 
-
+    
+       
     }
 }
